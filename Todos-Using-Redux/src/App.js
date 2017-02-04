@@ -42,8 +42,8 @@ class App extends Component {
         </div>
         <div className="todos-container">
           <h2>Checklist</h2>
-          <input type="text" className="addTaskInput" onChange={this.textChanged} /><button className="addTaskButton" onClick={this.createTask.bind(this)}>Add Task</button>
-          <Todos todos={this.state.todos} createTask={this.createTask} deleteTask={this.deleteTask} />
+          <input type="text" className="addTaskInput" onChange={this.textChanged} /><button className="addTaskButton" onClick={this.createTask}>Add Task</button>
+          <Todos todos={this.state.todos} />
         </div>
       </div>
     );
