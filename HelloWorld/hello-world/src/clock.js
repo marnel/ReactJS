@@ -26,6 +26,7 @@ class Clock extends Component {
             <div>
                 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
             </div>
+            
         );
     }
 }
