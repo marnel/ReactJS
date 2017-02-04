@@ -27,3 +27,26 @@
     position: relative;
     bottom: 35px;
 }
+
+.todos-container {
+  width: 35%;
+  margin:auto;
+}
+
+.todo-item {
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.todoCheckbox {
+  margin-right: 8px;
+}
+
+.addTaskButton {
+  margin-left: 10px;
+}
+
+.addTaskInput {
+  width: 60%;
+}
