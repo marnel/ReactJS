@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Todos} from './components/Todos';
-import {createTodo, toggleChecked, findTodoById, updateTodo} from './lib/todoHelpers';
+import TodosLink  from './containers/TodosLink';
+import { createTodo, toggleChecked, findTodoById, updateTodo } from './lib/todoHelpers';
+import AddTodo from './containers/AddTodo';
 
 class App extends Component {
-
-  constructor(){
-    super();
-    this.state = {todos: this.loadTodos()};
-  }
 
   loadTodos(){
       return [
@@ -19,6 +15,8 @@ class App extends Component {
       ]
   }
 
+  // Using experimental notation to bind function to this thru arrow function.
+  // More stable approach would be to bind it in the constructor.
   deleteTask = () => {
 
   }
@@ -49,9 +47,8 @@ class App extends Component {
         </div>
         <div className="todos-container">
           <h2>Checklist</h2>
-          <input type="text" className="addTaskInput" onChange={this.textChanged} />
-          <button className="addTaskButton" onClick={this.createTask}>Add Task</button>
-          <Todos todos={this.state.todos} selectionChanged={this.todoSelectionChanged} />
+          <AddTodo />
+          <TodosLink />
         </div>
       </div>
     );
