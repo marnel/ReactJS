@@ -11,3 +11,11 @@ export const todoTextInputChanged = (text) => {
     payload: text
   }
 }
+
+export const todoToggled = (id) => {
+  console.log(id.target)
+  return {
+    type: "TODO-TOGGLED",
+    payload: id
+  }
+}

@@ -1,5 +1,6 @@
 import { Todos } from '../components/Todos.js'
 import { connect } from 'react-redux'
+import { todoToggled } from '../actions/todoActions'
 
 
 const mapStateToProps = (state) => {
@@ -10,7 +11,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    action: ''
+    toggled: (id) => {
+      dispatch(todoToggled(id))
+    }
   }
 }
 

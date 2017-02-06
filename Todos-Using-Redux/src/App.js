@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import TodosLink  from './containers/TodosLink';
-import { createTodo, toggleChecked, findTodoById, updateTodo } from './lib/todoHelpers';
-import AddTodo from './containers/AddTodo';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import TodosLink  from './containers/TodosLink'
+import { createTodo, toggleChecked, findTodoById, updateTodo } from './lib/todoHelpers'
+import AddTodo from './containers/AddTodo'
 
 class App extends Component {
 
@@ -22,10 +22,10 @@ class App extends Component {
   }
 
   createTask = () => {
-    const todos = this.state.todos;
-    const todo = {id: Date.now(), value: this.state.text, completed: false };
-    const newTodos = createTodo(todos, todo);
-    this.setState({todos: newTodos});
+    const todos = this.state.todos
+    const todo = {id: Date.now(), value: this.state.text, completed: false }
+    const newTodos = createTodo(todos, todo)
+    this.setState({todos: newTodos})
   }
 
   textChanged = (e) => {
@@ -33,9 +33,9 @@ class App extends Component {
   }
 
   todoSelectionChanged = (todo) => {
-    var t = toggleChecked(findTodoById(todo.id, this.state.todos));
-    const updatedTodos = updateTodo(this.state.todos, t);
-    this.setState({todos: updatedTodos});
+    var t = toggleChecked(findTodoById(todo.id, this.state.todos))
+    const updatedTodos = updateTodo(this.state.todos, t)
+    this.setState({todos: updatedTodos})
   }
 
   render() {
@@ -55,4 +55,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
