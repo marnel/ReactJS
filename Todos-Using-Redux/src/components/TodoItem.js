@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const TodoItem = ({completed, text, toggled}) => {
-  console.log(completed);
+
   return (
     <li className="todo-item">
       <input type="checkbox"
