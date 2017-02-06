@@ -3,7 +3,7 @@ import { TodoItem } from './TodoItem'
 
 export const Todos = ({todos, toggled}) => {
   const items = todos.map( todo =>
-     <TodoItem key={todo.id} text={todo.value} todo={todo} toggled={() => toggled(todo.id)} />
+     <TodoItem key={todo.id} text={todo.value} completed={todo.completed} toggled={() => toggled(todo.id)} />
   )
   return (
     <div>

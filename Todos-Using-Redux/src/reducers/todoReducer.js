@@ -17,6 +17,7 @@ export const todoReducer = (state={todos: [], textValue: ''}, action) => {
       var t = toggleChecked(findTodoById(action.payload, state.todos))
       const updatedTodos = updateTodo(state.todos, t)
       return {
+        ...state,
         todos: updatedTodos
       }
     default:
