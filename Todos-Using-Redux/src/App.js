@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import TodosLink  from './containers/TodosLink'
 import AddTodo from './containers/AddTodo'
+import Todos from './components/Todos'
 
 class App extends Component {
 
@@ -24,7 +24,7 @@ class App extends Component {
         <div className="todos-container">
           <h2>Checklist</h2>
           <AddTodo />
-          <TodosLink />
+          <Todos />
         </div>
       </div>
     );
