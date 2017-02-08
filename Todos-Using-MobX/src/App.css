@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.powered-by {
+    position: relative;
+    bottom: 35px;
+}
+
+.todos-container {
+  width: 35%;
+  margin:auto;
+}
+
+.todo-item {
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.todoCheckbox {
+  margin-right: 8px;
+}
+
+.addTaskButton {
+  margin-left: 10px;
+}
+
+.addTaskInput {
+  width: 60%;
+}
