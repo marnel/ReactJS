@@ -12,8 +12,9 @@ class Todos {
 
   addTask = action(() => {
     this.todos.push(new TodoItem(this.textVal))
+    this.textVal = ''
   })
 
 }
 
-export default Todos;
+export default Todos

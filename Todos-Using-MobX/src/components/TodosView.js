@@ -5,8 +5,8 @@ import TodoItemView from './TodoItemView'
 
 class TodosView extends React.Component {
   render(){
-    const state = this.props.todos;
-    const items = state.todos.map( todo => {
+    const store = this.props.todos;
+    const items = store.todos.map( todo => {
         return ( <TodoItemView key={todo.id} todo={todo} /> )
       }
     )

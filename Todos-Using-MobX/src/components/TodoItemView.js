@@ -3,13 +3,13 @@ import { observer } from 'mobx-react'
 
 class TodoItemView extends React.Component {
   render(){
-    const state = this.props.todo
+    const store = this.props.todo
 
     return (
       <li className="todo-item">
         <input type="checkbox"
-          className="todoCheckbox" onChange={e => { state.completed = !state.completed }}/>
-        <span style={{textDecoration: state.completed ? 'line-through' : 'none' }}>{state.value}</span>
+          className="todoCheckbox" onChange={e => { store.completed = !store.completed }}/>
+        <span style={{textDecoration: store.completed ? 'line-through' : 'none' }}>{store.value}</span>
       </li>
     )
   }
