@@ -6,13 +6,20 @@ class Todos {
     extendObservable(this, {
       todos: [new TodoItem('test task 1')],
       textVal: '',
-      addNewTask: this.addTask
+      selectedID: '',
+      addNewTask: this.addTask,
+      deleteTodo: this.deleteTodoAction
     })
   }
 
   addTask = action(() => {
     this.todos.push(new TodoItem(this.textVal))
     this.textVal = ''
+  })
+
+  deleteTodoAction = action(() => {
+    const idx = this.todos.findIndex(item => item.id === this.selectedID);
+    this.todos.splice(idx,1)
   })
 
 }

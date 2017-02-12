@@ -5,9 +5,9 @@ import TodoItemView from './TodoItemView'
 
 class TodosView extends React.Component {
   render(){
-    const store = this.props.todos;
+    const store = this.props.todos
     const items = store.todos.map( todo => {
-        return ( <TodoItemView key={todo.id} todo={todo} /> )
+        return ( <TodoItemView key={todo.id} todo={todo} todosStore={store} /> )
       }
     )
     return (
@@ -18,4 +18,4 @@ class TodosView extends React.Component {
   }
 }
 
-export default observer(TodosView);
+export default observer(TodosView)
