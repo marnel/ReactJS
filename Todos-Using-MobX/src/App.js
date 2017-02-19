@@ -10,7 +10,7 @@ import AddTodoView from './components/AddTodoView'
 class App extends Component {
 
   render() {
-    const {Todos} = this.props;
+    const store = this.props.store;
 
     return (
       <div className="App">
@@ -23,8 +23,8 @@ class App extends Component {
         </p>
         <div className="todos-container">
           <h2>Checklist</h2>
-          <AddTodoView todos={Todos} />
-          <TodosView todos={Todos} />
+          <AddTodoView store={store} />
+          <TodosView store={store} />
         </div>
         <DevTools />
       </div>
@@ -33,3 +33,7 @@ class App extends Component {
 }
 
 export default observer(App);
+
+App.propTypes = {
+  store: React.PropTypes.object
+}

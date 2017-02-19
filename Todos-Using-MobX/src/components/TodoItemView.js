@@ -3,17 +3,17 @@ import { observer } from 'mobx-react'
 
 class TodoItemView extends React.Component {
   render(){
-    const store = this.props.todo
-    const todosStore = this.props.todosStore
+    const todo = this.props.todo
+    const store = this.props.store
 
     return (
       <li className="todo-item">
         <input type="checkbox"
-          className="todoCheckbox" onChange={e => { store.completed = !store.completed }}/>
-        <span style={{textDecoration: store.completed ? 'line-through' : 'none' }}>{store.value}</span>
+          className="todoCheckbox" onChange={e => { todo.completed = !todo.completed }}/>
+        <span style={{textDecoration: todo.completed ? 'line-through' : 'none' }}>{todo.value}</span>
         <span onClick={ () => {
-            todosStore.selectedID = store.id
-            todosStore.deleteTodo()
+            store.selectedID = todo.id
+            store.deleteTodo()
           }
         } ><button>delete</button></span>
       </li>
@@ -22,3 +22,8 @@ class TodoItemView extends React.Component {
 }
 
 export default observer(TodoItemView)
+
+TodoItemView.propTypes = {
+  store: React.PropTypes.object,
+  todo: React.PropTypes.object
+}

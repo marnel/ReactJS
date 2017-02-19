@@ -5,6 +5,6 @@ import './index.css';
 import Todos from './Todos'
 
 ReactDOM.render(
-  <App Todos={new Todos()}/>,
+  <App store={new Todos()}/>,
   document.getElementById('root')
 );

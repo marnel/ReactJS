@@ -4,7 +4,7 @@ import { observer } from 'mobx-react'
 class AddTodoView extends React.Component {
 
   render(){
-    const store = this.props.todos;
+    const store = this.props.store;
     return (
       <div>
         <input type="text" className="addTaskInput" value={store.textVal} onChange={e => {store.textVal = e.target.value }} />
@@ -15,3 +15,7 @@ class AddTodoView extends React.Component {
 }
 
 export default observer(AddTodoView);
+
+AddTodoView.propTypes = {
+  store: React.PropTypes.object
+}
