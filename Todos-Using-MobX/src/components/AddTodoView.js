@@ -8,7 +8,7 @@ class AddTodoView extends React.Component {
     return (
       <div>
         <input type="text" className="addTaskInput" value={store.textVal} onChange={e => {store.textVal = e.target.value }} />
-        <button className="addTaskButton" onClick={store.addNewTask}>Add Task</button>
+        <button className="addTaskButton" disabled={store.isTodoValid} onClick={store.addNewTask}>Add Task</button>
       </div>
     )
   }
