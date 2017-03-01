@@ -1,6 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react'
 
+@observer
 class TodoItemView extends React.Component {
   render(){
     const todo = this.props.todo
@@ -21,7 +22,7 @@ class TodoItemView extends React.Component {
   }
 }
 
-export default observer(TodoItemView)
+export default TodoItemView
 
 TodoItemView.propTypes = {
   store: React.PropTypes.object,

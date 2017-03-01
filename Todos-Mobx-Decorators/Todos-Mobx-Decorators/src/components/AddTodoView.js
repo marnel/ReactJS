@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react'
 
+@observer
 class AddTodoView extends React.Component {
 
   render(){
@@ -14,7 +15,7 @@ class AddTodoView extends React.Component {
   }
 }
 
-export default observer(AddTodoView);
+export default AddTodoView;
 
 AddTodoView.propTypes = {
   store: React.PropTypes.object

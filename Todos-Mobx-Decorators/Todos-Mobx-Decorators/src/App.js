@@ -6,7 +6,7 @@ import AddTodoView from './components/AddTodoView'
 import logo from './logo.svg'
 import './App.css';
 
-
+@observer
 class App extends Component {
   render() {
 
@@ -32,4 +32,4 @@ class App extends Component {
   }
 }
 
-export default observer(App);
+export default App;
