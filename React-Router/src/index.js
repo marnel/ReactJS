@@ -10,6 +10,7 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <Route path="/about" component={AboutPage} />
+      <Route path="/about/:name" component={AboutPage} />
       <Route path="/test" component={TestPage} />
     </Route>
   </Router>,
